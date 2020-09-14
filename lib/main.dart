@@ -30,6 +30,15 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int index = 0;
+  bool isFavorite = true;
+
+  String cr7_default = "lib/assets/images/cr7_black.jpg";
+  String cr7_black = "lib/assets/images/cr7_black.jpg";
+  String cr7_white = "lib/assets/images/cr7_white.jpg";
+  String cr7_red = "lib/assets/images/cr7_red.jpg";
+  String cr7_blue = "lib/assets/images/cr7_blue.jpg";
+
   Widget property() {
     return Container(
       padding: EdgeInsets.all(16),
@@ -42,34 +51,73 @@ class _MyHomePageState extends State<MyHomePage> {
               Text("Color"),
               Row(
                 children: <Widget>[
-                  Container(
-                      decoration: BoxDecoration(
-                          color: Colors.black,
-                          border: Border.all(color: Colors.grey, width: 4),
-                          shape: BoxShape.circle),
-                      width: 30,
-                      height: 30,
-                      margin: EdgeInsets.all(4)),
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Colors.green, shape: BoxShape.circle),
-                    width: 30,
-                    height: 30,
-                    margin: EdgeInsets.all(4),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        index = 0;
+                        cr7_default = cr7_black;
+                      });
+                    },
+                    child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.black,
+                            border: Border.all(
+                                color: Colors.grey, width: index == 0 ? 5 : 0),
+                            shape: BoxShape.circle),
+                        width: 30,
+                        height: 30,
+                        margin: EdgeInsets.all(4)),
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Colors.yellow, shape: BoxShape.circle),
-                    width: 30,
-                    height: 30,
-                    margin: EdgeInsets.all(4),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        index = 1;
+                        cr7_default = cr7_white;
+                      });
+                    },
+                    child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            border: Border.all(
+                                color: Colors.grey, width: index == 1 ? 5 : 0),
+                            shape: BoxShape.circle),
+                        width: 30,
+                        height: 30,
+                        margin: EdgeInsets.all(4)),
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Colors.blue, shape: BoxShape.circle),
-                    width: 30,
-                    height: 30,
-                    margin: EdgeInsets.all(4),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        index = 2;
+                        cr7_default = cr7_red;
+                      });
+                    },
+                    child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.red,
+                            border: Border.all(
+                                color: Colors.grey, width: index == 2 ? 5 : 0),
+                            shape: BoxShape.circle),
+                        width: 30,
+                        height: 30,
+                        margin: EdgeInsets.all(4)),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        index = 3;
+                        cr7_default = cr7_blue;
+                      });
+                    },
+                    child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.blue,
+                            border: Border.all(
+                                color: Colors.grey, width: index == 3 ? 5 : 0),
+                            shape: BoxShape.circle),
+                        width: 30,
+                        height: 30,
+                        margin: EdgeInsets.all(4)),
                   ),
                 ],
               )
@@ -93,19 +141,27 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget cardItem() {
+    Color favoriteColor = Colors.grey;
+
     return Container(
       child: Stack(
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: Image.asset("lib/assets/images/cr7.jpg"),
+            child: Image.asset(cr7_default),
           ),
           Positioned(
             child: FloatingActionButton(
-                elevation: 8,
-                child: Icon(Icons.favorite, color: Colors.grey),
-                backgroundColor: Colors.white,
-                onPressed: () {}),
+              elevation: 8,
+              onPressed: () {
+                setState(() {
+                  isFavorite = !isFavorite;
+                });
+              },
+              child: Icon(Icons.favorite,
+                  color: isFavorite ? Colors.red : Colors.grey),
+              backgroundColor: Colors.white,
+            ),
             bottom: 0,
             right: 8,
           ),
