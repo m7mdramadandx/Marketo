@@ -111,20 +111,20 @@ List<Product> productList = [
     size: "9, 10, 11",
     description:
         "Vans is an American manufacturer of skateboarding shoes and related apparel, based in Santa Ana, California and owned by VF Corporation. The company also sponsors surf, snowboarding, BMX, and motocross teams.[2] Since 1996, the company has been the primary sponsor of the annual Vans Warped Tour traveling rock festival.",
-    imgUrl: "http://pngimg.com/uploads/vans/vans_PNG29.png",
-    color: Color(0xffE3AB57),
+    imgUrl: "http://pngimg.com/uploads/vans/vans_PNG24.png",
+    color: Colors.blue.shade900,
     productItem: [
       ProductItem(
-        color: Color(0xff000000),
-        imgUrl: "http://pngimg.com/uploads/vans/vans_PNG16.png",
+        color: Colors.blue.shade900,
+        imgUrl: "http://pngimg.com/uploads/vans/vans_PNG24.png",
       ),
       ProductItem(
-        color: Colors.pinkAccent.shade100,
-        imgUrl: "http://pngimg.com/uploads/vans/vans_PNG7.png",
+        color: Colors.blueAccent.shade100,
+        imgUrl: "http://pngimg.com/uploads/vans/vans_PNG35.png",
       ),
       ProductItem(
-        color: Colors.black,
-        imgUrl: "http://pngimg.com/uploads/vans/vans_PNG16.png",
+        color: Color(0xff33385B),
+        imgUrl: "http://pngimg.com/uploads/vans/vans_PNG15.png",
       ),
     ],
   ),
