@@ -1,4 +1,4 @@
-name: eva_flutter
+name: marketo
 description: A new Flutter application.
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -13,6 +13,9 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.0
+  cached_network_image: ^2.3.2+1
+  shared_preferences: ^0.5.6+1
+
 
 dev_dependencies:
   flutter_test:
@@ -22,8 +25,9 @@ flutter:
   uses-material-design: true
 
   assets:
-    - lib/assets/images/
+    - assets/images/
+
   fonts:
     - family: Comfortaa
       fonts:
-        - asset: lib/assets/fonts/comfortaa.ttf
+        - asset: assets/fonts/comfortaa.ttf
