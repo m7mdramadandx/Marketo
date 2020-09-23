@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "815613811709",
+    "firebase_url": "https://marketo-b2550.firebaseio.com",
+    "project_id": "marketo-b2550",
+    "storage_bucket": "marketo-b2550.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815613811709:android:2643039eaf1e5f98d95794",
+        "android_client_info": {
+          "package_name": "com.ramadan.marketo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "815613811709-u7ej92k9mimo3eskahn59vim1qriaofi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClRhrY3aMiwX9hiWjgl7Sg4Jwg6XXlf8k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "815613811709-u7ej92k9mimo3eskahn59vim1qriaofi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

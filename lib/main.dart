@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'screens/Home.dart';
+import 'package:marketo/screens/aq.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,7 +24,7 @@ class MyApp extends StatelessWidget {
             button: TextStyle(color: Color(0xff3a4750)),
           ),
           fontFamily: 'Comfortaa'),
-      home: MyHomePage(),
+      home: LandingPage(),
     );
   }
 }
